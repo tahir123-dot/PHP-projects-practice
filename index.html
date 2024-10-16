@@ -1,46 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working Contact form</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
 
-    <!-- fontAwesome link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Google font link-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google font link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="wrapper">
-        <header>Send us a Message</header>
-        <form action="#">
-            <div class="dbl-field">
-                <div class="field">
-                    <input type="text" placeholder="Enter your name">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="field">
-                    <input type="text" placeholder="Enter your email">
-                    <i class="fas fa-enveloper"></i>
-                </div>
-                <div class="field">
-                    <input type="text" placeholder="Enter your phone">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="field">
-                    <input type="text" placeholder="Enter your website">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <div class="message">
-                    <textarea placeholder="Write your message"></textarea>
-                    <i class="material-icons">message</i>
-                </div>
-                <div class="button-area">
-                    <button type="submit">Send Message</button>
-                    <span>Sending you message....</span>
-                </div>
-            </div>
-        </form>
+      <header>Send us a Message</header>
+      <form method="POST" action="message.php">
+        <div class="dbl-field">
+          <div class="field">
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="field">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+        <div class="dbl-field">
+          <div class="field">
+            <input type="text" name="phone" placeholder="Enter your phone" />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="field">
+            <input
+              type="text"
+              name="website"
+              placeholder="Enter your website"
+            />
+            <i class="fas fa-globe"></i>
+          </div>
+        </div>
+        <div class="message">
+          <textarea
+            name="message"
+            placeholder="Write your message"
+            required
+          ></textarea>
+          <i class="fas fa-comment"></i>
+        </div>
+        <div class="button-area">
+          <button type="submit">Send Message</button>
+          <span>Sending your message...</span>
+        </div>
+      </form>
     </div>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
