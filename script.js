@@ -2,10 +2,10 @@ const form = document.querySelector("form");
 const statusTxt = form.querySelector(".button-area span");
 
 form.onsubmit = (e) => {
-  e.preventDefault();  // Form ko submit hone se rokta hai
+  e.preventDefault();  
 
   statusTxt.style.display = "inline";
-  statusTxt.innerText = "Sending your message...";  // Status message update
+  statusTxt.innerText = "Sending your message...";  /
 
   let xhr = new XMLHttpRequest();
   xhr.open("POST", "message.php", true);
@@ -15,7 +15,7 @@ form.onsubmit = (e) => {
       statusTxt.innerText = response;
 
       if (response.includes("Success")) {
-        form.reset();  // Reset the form on success
+        form.reset();  
       }
     }
   };
